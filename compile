@@ -1,0 +1,34 @@
+#!/bin/sh
+
+cat > __obliv_swig.i << EOF
+%include swig/scan/types.i
+EOF
+
+cp headers/scan/types.h ./
+cp src/scan/types.cpp ./
+cp libs/libtins.so ./
+
+swig -c++ -includeall -ruby __obliv_swig.i
+
+cat > extconf.rb << EOF
+require "mkmf"
+
+\$libs += "libtins.so"
+\$warnflags += " -Wreturn-type "
+create_makefile("types");
+EOF
+
+ruby extconf.rb
+make
+
+cp rmodules/scan/types.rb ./
+
+rm types.cpp
+rm types.h
+rm extconf.rb
+rm libtins.so
+rm types.o
+rm __obliv_swig.i
+rm __obliv_swig_wrap.o
+rm __obliv_swig_wrap.cxx
+rm Makefile

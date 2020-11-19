@@ -1,0 +1,3 @@
+According to size of the library files, decide whether to bundle the pack for all operating systems or create different installers for each one.
+
+Whatever turns out, use a cross platform universal installer

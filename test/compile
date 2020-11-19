@@ -1,0 +1,25 @@
+#!/bin/sh
+
+rm test.so
+
+cat > __obliv_swig.i << EOF
+%include test.i
+EOF
+
+swig -c++ -ruby __obliv_swig.i
+
+cat > extconf.rb << EOF
+require "mkmf"
+
+create_makefile("test");
+EOF
+
+ruby extconf.rb
+make
+
+rm extconf.rb
+rm test.o
+rm __obliv_swig.i
+rm __obliv_swig_wrap.o
+rm __obliv_swig_wrap.cxx
+rm Makefile

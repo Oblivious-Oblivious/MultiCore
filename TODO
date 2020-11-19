@@ -1,0 +1,7 @@
+||--> Make sure the C++ classes have a full setup of public, private, protected keywords for the swig interface to wrap the functions properly
+
+--> Implement a local sniffer for the scanning modules
+
+--> Create an Android/iOS app that supplements the framework
+
+--> Design custom input methods, all being threaded

@@ -1,0 +1,51 @@
+#!/bin/sh
+
+# General
+gem install whois
+gem install whois-parser
+
+# M1
+gem install colorize
+gem install pry
+
+# M2
+gem install virustotal
+gem install uirusu
+gem install tty-prompt
+gem install Thor
+gem install Slop
+gem install Highline
+gem install commander
+gem install GLI
+gem install Escort
+
+# M3
+gem install geoIp
+gem install ronIn-scanners
+gem install net-ping
+gem install net-dns
+gem install net-ssh
+gem install net-scp
+gem install packetfu
+gem install ruby-nmap
+gem install snmp
+
+# M4
+gem install activerecord
+gem install activerecord-sqlserver-adapter
+gem install activerecord-oracle_enhanced-adapter
+gem install tiny_tds
+## gem install buby
+gem install wasabi
+gem install savon
+gem install Mechanize
+gem install httpclient
+gem install nokogiri
+gem install twitter
+gem install watir_webdriver
+gem install selenium_webdriver
+gem install coffee-script
+gem install opal
+
+# M5 | M6
+gem install metasm
